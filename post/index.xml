@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Longg`s Site</title>
+    <link>https://ghlonghan007.github.io/post/</link>
+    <description>Recent content in Posts on Longg`s Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 02 Apr 2021 00:31:58 +0800</lastBuildDate>
+    
+	<atom:link href="https://ghlonghan007.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Hugo Flow</title>
+      <link>https://ghlonghan007.github.io/post/flow/</link>
+      <pubDate>Fri, 02 Apr 2021 00:31:58 +0800</pubDate>
+      
+      <guid>https://ghlonghan007.github.io/post/flow/</guid>
+      <description>1.使用Hugo 新建mockdown
+hugo new flow.md 2.预览
+hugo server 3.编译
+hugo -D 4.上传
+cd .public git add . git commit git push </description>
+    </item>
+    
+    <item>
+      <title>Fastapi min代码示例</title>
+      <link>https://ghlonghan007.github.io/post/fastapi-min%E4%BB%A3%E7%A0%81%E7%A4%BA%E4%BE%8B/</link>
+      <pubDate>Thu, 04 Mar 2021 22:49:49 +0800</pubDate>
+      
+      <guid>https://ghlonghan007.github.io/post/fastapi-min%E4%BB%A3%E7%A0%81%E7%A4%BA%E4%BE%8B/</guid>
+      <description>Fastapi jwt验正 import jwt from fastapi import FastAPI, Depends, HTTPException, status from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm from passlib.hash import bcrypt from tortoise import fields from tortoise.contrib.fastapi import register_tortoise from tortoise.contrib.pydantic import pydantic_model_creator from tortoise.models import Model app = FastAPI() JWT_SECRET = &amp;#39;myjwtsecret&amp;#39; class User(Model): id = fields.IntField(pk=True) username = fields.CharField(50, unique=True) password_hash = fields.CharField(128) def verify_password(self, password): return bcrypt.verify(password, self.password_hash) User_Pydantic = pydantic_model_creator(User, name=&amp;#39;User&amp;#39;) UserIn_Pydantic = pydantic_model_creator(User, name=&amp;#39;UserIn&amp;#39;, exclude_readonly=True) oauth2_scheme = OAuth2PasswordBearer(tokenUrl=&amp;#39;token&amp;#39;) async def authenticate_user(username: str, password: str): user = await User.</description>
+    </item>
+    
+    <item>
+      <title>tortoise学习笔记</title>
+      <link>https://ghlonghan007.github.io/post/todo/</link>
+      <pubDate>Thu, 28 May 2020 17:22:59 +0800</pubDate>
+      
+      <guid>https://ghlonghan007.github.io/post/todo/</guid>
+      <description>一个异步ORM 支持MySQL
+使用分3步:
+1.定义一个模型
+from tortoise.models import Model from tortoise import fields class Tournament(Model): id = fields.IntField(pk=True) name = fields.TextField() 2.初始化orm,将模型注册到上面
+from tortoise import Tortoise, run_async async def init(): await Tortoise.init( db_url=&amp;#39;sqlite://db.sqlite3&amp;#39;, modules={&amp;#39;models&amp;#39;: [&amp;#39;app.models&amp;#39;]} ) # Generate the schema await Tortoise.generate_schemas() # run_async is a helper function to run simple async Tortoise scripts. run_async(init()) 3.使用ORM接口 自带很多方便的接口
+# Create instance by save tournament = Tournament(name=&#39;New Tournament&#39;) await tournament.save() # Or by .</description>
+    </item>
+    
+  </channel>
+</rss>
