@@ -6,10 +6,23 @@
     <description>Recent content in Posts on Longg`s Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 04 Mar 2021 22:49:49 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 02 Apr 2021 00:31:58 +0800</lastBuildDate>
     
 	<atom:link href="https://ghlonghan007.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Hugo Flow</title>
+      <link>https://ghlonghan007.github.io/post/flow/</link>
+      <pubDate>Fri, 02 Apr 2021 00:31:58 +0800</pubDate>
+      
+      <guid>https://ghlonghan007.github.io/post/flow/</guid>
+      <description>1.使用Hugo 新建mockdown
+hugo new flow.md 2.预览
+hugo server 3.编译
+hugo -D 4.上传
+cd .public git add . git commit git push </description>
+    </item>
     
     <item>
       <title>Fastapi min代码示例</title>

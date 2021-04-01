@@ -13,10 +13,10 @@
     
     <item>
       <title>Hugo Flow</title>
-      <link>https://ghlonghan007.github.io/flow/</link>
+      <link>https://ghlonghan007.github.io/post/flow/</link>
       <pubDate>Fri, 02 Apr 2021 00:31:58 +0800</pubDate>
       
-      <guid>https://ghlonghan007.github.io/flow/</guid>
+      <guid>https://ghlonghan007.github.io/post/flow/</guid>
       <description>1.使用Hugo 新建mockdown
 hugo new flow.md 2.预览
 hugo server 3.编译
