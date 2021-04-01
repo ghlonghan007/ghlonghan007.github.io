@@ -1,4 +1,5 @@
-baseURL = "http://example.org/"
+baseURL = "https://ghlonghan007.github.io/"
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "Longg`s Site"
 theme = "base16"
+pygmentsuseclasses = true
