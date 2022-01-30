@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Longg`s Site</title>
+    <link>https://ghlonghan007.github.io/categories/</link>
+    <description>Recent content in Categories on Longg`s Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 30 Jan 2022 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://ghlonghan007.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Hugo</title>
+      <link>https://ghlonghan007.github.io/categories/hugo/</link>
+      <pubDate>Sun, 30 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://ghlonghan007.github.io/categories/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Fastapi</title>
+      <link>https://ghlonghan007.github.io/categories/fastapi/</link>
+      <pubDate>Thu, 04 Mar 2021 22:49:49 +0800</pubDate>
+      
+      <guid>https://ghlonghan007.github.io/categories/fastapi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Git</title>
+      <link>https://ghlonghan007.github.io/categories/git/</link>
+      <pubDate>Sun, 01 Nov 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://ghlonghan007.github.io/categories/git/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
