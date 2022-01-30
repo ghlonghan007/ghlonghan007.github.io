@@ -1,9 +1,4 @@
----
-title : Hugoflow
-categories: [Hugo,] 
-date : 2022-01-30
-tags : [Hugo,]
----
+
 
 1.使用Hugo 新建mockdown
 ```bash
@@ -29,4 +24,3 @@ git add .
 git commit 
 git push
 ```
-

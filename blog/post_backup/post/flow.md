@@ -1,8 +1,6 @@
 ---
-title : Hugoflow
-categories: [Hugo,] 
-date : 2022-01-30
-tags : [Hugo,]
+title: "Hugo Flow"
+date: 2021-04-02T00:31:58+08:00
 ---
 
 1.使用Hugo 新建mockdown
