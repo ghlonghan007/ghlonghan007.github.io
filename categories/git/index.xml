@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Git on Longg`s Site</title>
-    <link>https://ghlonghan007.github.io/categories/git/</link>
+    <link>/categories/git/</link>
     <description>Recent content in Git on Longg`s Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 01 Nov 2015 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://ghlonghan007.github.io/categories/git/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/categories/git/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Git使用学习笔记</title>
-      <link>https://ghlonghan007.github.io/post/git/</link>
+      <link>/post/git/</link>
       <pubDate>Sun, 01 Nov 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://ghlonghan007.github.io/post/git/</guid>
+      <guid>/post/git/</guid>
       <description>一、Git知识点   将发生变化的文件全部保存。为了减少磁盘使用，只保存发生变化的文件。使用sha1算法的20字节（40位）值作为对象的唯一标识。   三个域： repository &amp;ndash; 仓库 working directory &amp;ndash; 工作区 staging area/index &amp;ndash; 过渡区   三个对象： tree ：记录文件名，及指向blob的指针 blob ：记录文件内容 commit ：和tree是一一对应的 find .git/objects/ -type f |wc -l git cat-file -t sha1码 git show -s &amp;ndash;pretty=raw xxx
   三个引用： HEAD branch remote branch
   其他： 对象是静止的，引用是动态的。
