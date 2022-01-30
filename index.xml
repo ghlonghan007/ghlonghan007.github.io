@@ -6,15 +6,15 @@
     <description>Recent content on Longg`s Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 02 Apr 2021 00:31:58 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 30 Jan 2022 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://ghlonghan007.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Hugo Flow</title>
+      <title>Hugoflow</title>
       <link>https://ghlonghan007.github.io/post/flow/</link>
-      <pubDate>Fri, 02 Apr 2021 00:31:58 +0800</pubDate>
+      <pubDate>Sun, 30 Jan 2022 00:00:00 +0000</pubDate>
       
       <guid>https://ghlonghan007.github.io/post/flow/</guid>
       <description>1.使用Hugo 新建mockdown
@@ -22,6 +22,24 @@ hugo new flow.md 2.预览
 hugo server 3.编译
 hugo -D 4.上传
 cd .public git add . git commit git push </description>
+    </item>
+    
+    <item>
+      <title>Fastapi jwt验正</title>
+      <link>https://ghlonghan007.github.io/post/fastapi-jwt%E9%AA%8C%E6%AD%A3/</link>
+      <pubDate>Thu, 04 Mar 2021 22:49:49 +0800</pubDate>
+      
+      <guid>https://ghlonghan007.github.io/post/fastapi-jwt%E9%AA%8C%E6%AD%A3/</guid>
+      <description>Fastapi Oauth2 + jwt验正 验正流程:
+1.小明(客户端)发送请求给 longg(第三方应用) :
+​	-客户端访问第三方端口,无权限就重定向到服务方
+​	&amp;mdash;-访问接口
+​	&amp;mdash;-无权限
+​	&amp;mdash;密码使用JWT验正
+ longg说需要登入:
+-成功登入之后返回token,并保存在本地
+  小明成功访问
+  import jwt from fastapi import FastAPI, Depends, HTTPException, status from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm from passlib.hash import bcrypt from tortoise import fields from tortoise.contrib.fastapi import register_tortoise from tortoise.contrib.pydantic import pydantic_model_creator from tortoise.models import Model app = FastAPI() JWT_SECRET = &amp;#39;myjwtsecret&amp;#39; class User(Model): id = fields.IntField(pk=True) username = fields.</description>
     </item>
     
     <item>
@@ -34,17 +52,18 @@ cd .public git add . git commit git push </description>
     </item>
     
     <item>
-      <title>tortoise学习笔记</title>
-      <link>https://ghlonghan007.github.io/post/todo/</link>
-      <pubDate>Thu, 28 May 2020 17:22:59 +0800</pubDate>
+      <title>Git使用学习笔记</title>
+      <link>https://ghlonghan007.github.io/post/git/</link>
+      <pubDate>Sun, 01 Nov 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://ghlonghan007.github.io/post/todo/</guid>
-      <description>一个异步ORM 支持MySQL
-使用分3步:
-1.定义一个模型
-from tortoise.models import Model from tortoise import fields class Tournament(Model): id = fields.IntField(pk=True) name = fields.TextField() 2.初始化orm,将模型注册到上面
-from tortoise import Tortoise, run_async async def init(): await Tortoise.init( db_url=&amp;#39;sqlite://db.sqlite3&amp;#39;, modules={&amp;#39;models&amp;#39;: [&amp;#39;app.models&amp;#39;]} ) # Generate the schema await Tortoise.generate_schemas() # run_async is a helper function to run simple async Tortoise scripts. run_async(init()) 3.使用ORM接口 自带很多方便的接口
-# Create instance by save tournament = Tournament(name=&#39;New Tournament&#39;) await tournament.save() # Or by .</description>
+      <guid>https://ghlonghan007.github.io/post/git/</guid>
+      <description>一、Git知识点   将发生变化的文件全部保存。为了减少磁盘使用，只保存发生变化的文件。使用sha1算法的20字节（40位）值作为对象的唯一标识。   三个域： repository &amp;ndash; 仓库 working directory &amp;ndash; 工作区 staging area/index &amp;ndash; 过渡区   三个对象： tree ：记录文件名，及指向blob的指针 blob ：记录文件内容 commit ：和tree是一一对应的 find .git/objects/ -type f |wc -l git cat-file -t sha1码 git show -s &amp;ndash;pretty=raw xxx
+  三个引用： HEAD branch remote branch
+  其他： 对象是静止的，引用是动态的。
+  二、操作使用 git配置 1.文件位置
+用户目录下的全局配置文件： C:\Users\Administrator.gitconfig 各仓库自己的配置文件： D:\gitdemo.git\config
+2.用户配置：
+# 全局， git config --global user.name &amp;#39;pyli.xm&amp;#39; git config --global user.</description>
     </item>
     
   </channel>

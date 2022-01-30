@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="/css/style.css" type="text/css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700" type="text/css">
 <link rel="alternate" href="/index.xml" type="application/rss+xml" title="Longg`s Site">
-<title>Categories - Longg`s Site</title>
+<title>Git - Longg`s Site</title>
 </head>
 <body>
 
@@ -26,38 +26,10 @@
 
 
 <main role="main" class="article-list">
-  <h1 class="list-title">Categories</h1>
+  <h1 class="list-title">Git</h1>
   
     <article class="list-item" itemscope itemtype="http://schema.org/Blog">
-  <h2 class="headline" itemprop="headline"><a href="/categories/hugo/">Hugo</a></h2>
-  <div class="meta">
-
-    <span class="key">published on</span>
-    <span class="val"><time itemprop="datePublished" datetime="2022-01-30">January 30, 2022</time></span>
-
-  </div>
-  <section class="summary">
-     
-  </section>
-</article>
-
-  
-    <article class="list-item" itemscope itemtype="http://schema.org/Blog">
-  <h2 class="headline" itemprop="headline"><a href="/categories/fastapi/">Fastapi</a></h2>
-  <div class="meta">
-
-    <span class="key">published on</span>
-    <span class="val"><time itemprop="datePublished" datetime="2021-03-04">March 04, 2021</time></span>
-
-  </div>
-  <section class="summary">
-     
-  </section>
-</article>
-
-  
-    <article class="list-item" itemscope itemtype="http://schema.org/Blog">
-  <h2 class="headline" itemprop="headline"><a href="/categories/git/">Git</a></h2>
+  <h2 class="headline" itemprop="headline"><a href="/post/git/">Git使用学习笔记</a></h2>
   <div class="meta">
 
     <span class="key">published on</span>
@@ -65,7 +37,13 @@
 
   </div>
   <section class="summary">
-     
+    一、Git知识点   将发生变化的文件全部保存。为了减少磁盘使用，只保存发生变化的文件。使用sha1算法的20字节（40位）值作为对象的唯一标识。   三个域： repository &ndash; 仓库 working directory &ndash; 工作区 staging area/index &ndash; 过渡区   三个对象： tree ：记录文件名，及指向blob的指针 blob ：记录文件内容 commit ：和tree是一一对应的 find .git/objects/ -type f |wc -l git cat-file -t sha1码 git show -s &ndash;pretty=raw xxx
+  三个引用： HEAD branch remote branch
+  其他： 对象是静止的，引用是动态的。
+  二、操作使用 git配置 1.文件位置
+用户目录下的全局配置文件： C:\Users\Administrator.gitconfig 各仓库自己的配置文件： D:\gitdemo.git\config
+2.用户配置：
+# 全局， git config --global user.name &#39;pyli.xm&#39; git config --global user.  <a href="/post/git/">Read More...</a>
   </section>
 </article>
 
