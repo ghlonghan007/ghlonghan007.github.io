@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Mysql on MMay`s Site</title>
+        <link>https://example.com/categories/mysql/</link>
+        <description>Recent content in Mysql on MMay`s Site</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Fri, 17 Jun 2022 13:32:01 +0800</lastBuildDate><atom:link href="https://example.com/categories/mysql/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>mysql知识体系</title>
+        <link>https://example.com/p/mysql%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/</link>
+        <pubDate>Fri, 17 Jun 2022 13:32:01 +0800</pubDate>
+        
+        <guid>https://example.com/p/mysql%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/</guid>
+        <description>&lt;img src="https://example.com/p/mysql%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/1516163958219817909.jpeg" alt="Featured image of post mysql知识体系" /&gt;&lt;h2 id=&#34;mysql-结构图image-20220617080913938imgimage-20220617080913938png&#34;&gt;Mysql 结构图：&lt;img src=&#34;https://example.com/p/mysql%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/img/image-20220617080913938.png&#34;
+	width=&#34;1358&#34;
+	height=&#34;1014&#34;
+	srcset=&#34;https://example.com/p/mysql%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/img/image-20220617080913938_hueaab5778baf48f2eb34f21d626e6d635_719891_480x0_resize_box_2.png 480w, https://example.com/p/mysql%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/img/image-20220617080913938_hueaab5778baf48f2eb34f21d626e6d635_719891_1024x0_resize_box_2.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20220617080913938&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;133&#34;
+		data-flex-basis=&#34;321px&#34;
+	
+&gt;&lt;/h2&gt;
+&lt;p&gt;Server 层包括连接器、查询缓存、分析器、优化器、执行器等&lt;/p&gt;
+&lt;p&gt;存储引擎层负责数据的存储和提取。InnoDB、MyISAM 引擎&lt;/p&gt;
+&lt;h4 id=&#34;使用docker-创建实验环境&#34;&gt;使用docker 创建实验环境：&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sodu docker run -p 3306:3306 --name mysql &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;-v /usr/local/docker/mysql/conf:/etc/mysql &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;-v /usr/local/docker/mysql/logs:/var/log/mysql &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;-v /usr/local/docker/mysql/data:/var/lib/mysql &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;-e &lt;span class=&#34;nv&#34;&gt;MYSQL_ROOT_PASSWORD&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;123456&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;-d mysql:5.7
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;连接器&#34;&gt;连接器&lt;/h2&gt;
+&lt;p&gt;TCP 请求验证身份&lt;/p&gt;
+&lt;p&gt;show processlist；可以查看连接状态&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://example.com/p/mysql%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/img/image-20220617081744866.png&#34;
+	width=&#34;1668&#34;
+	height=&#34;220&#34;
+	srcset=&#34;https://example.com/p/mysql%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/img/image-20220617081744866_hu8f61bbf64ba161c3adc49ef9944a0b68_88741_480x0_resize_box_2.png 480w, https://example.com/p/mysql%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/img/image-20220617081744866_hu8f61bbf64ba161c3adc49ef9944a0b68_88741_1024x0_resize_box_2.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20220617081744866&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;758&#34;
+		data-flex-basis=&#34;1819px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;过多的长链接会占用大量内容存&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;定期断开长连接。使用一段时间，或者程序里面判断执行过一个占用内存的大查询后，断开连接，之后要查询再重连。&lt;/li&gt;
+&lt;li&gt;如果你用的是 MySQL 5.7 或更新版本，可以在每次执行一个比较大的操作后，通过执行mysql_reset_connection 来重新初始化连接资源。这个过程不需要重连和重新做权限验证，但是会将连接恢复到刚刚创建完时的状态。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;查询缓存&#34;&gt;查询缓存&lt;/h2&gt;
+&lt;p&gt;MySQL 拿到一个查询请求后，会先到查询缓存看看，之前是不是执行过这条语句。之前执行过的语句及其结果可能会以 key-value 对的形式，被直接缓存在内存中。&lt;/p&gt;
+&lt;p&gt;查询缓存在实际情况下失效非常频繁，只要对一个表更新，表上的查询缓存都会被清空，对于更新压力大的数据库，查询缓存的命中率会非常低。&lt;/p&gt;
+&lt;h2 id=&#34;分析器&#34;&gt;分析器&lt;/h2&gt;
+&lt;p&gt;词法分析&lt;/p&gt;
+&lt;p&gt;检查语法错误&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://example.com/p/mysql%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/img/image-20220620154647285.png&#34;
+	width=&#34;1734&#34;
+	height=&#34;176&#34;
+	srcset=&#34;https://example.com/p/mysql%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/img/image-20220620154647285_hu506925ca7dd605ff9971fdb4154305c1_52611_480x0_resize_box_2.png 480w, https://example.com/p/mysql%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/img/image-20220620154647285_hu506925ca7dd605ff9971fdb4154305c1_52611_1024x0_resize_box_2.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20220620154647285&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;985&#34;
+		data-flex-basis=&#34;2364px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;查看 最后的 use near 的提醒&lt;/p&gt;
+&lt;h2 id=&#34;优化器&#34;&gt;优化器&lt;/h2&gt;
+&lt;p&gt;优化器是在表里面有多个索引的时候，决定使用哪个索引；或者在一个语句有多表关联（join）的时候，决定各个表的连接顺序。&lt;/p&gt;
+&lt;h2 id=&#34;执行器&#34;&gt;执行器&lt;/h2&gt;
+&lt;p&gt;判断权限&lt;/p&gt;
+&lt;p&gt;执行查询语句&lt;/p&gt;
+&lt;p&gt;rows_examined 累加扫描多少行数据&lt;/p&gt;
+&lt;h1 id=&#34;更新流程&#34;&gt;更新流程&lt;/h1&gt;
+&lt;h2 id=&#34;redo-log&#34;&gt;redo log&lt;/h2&gt;
+&lt;p&gt;WAL:Write-Ahead Logging 先写日志，在写磁盘&lt;/p&gt;
+&lt;p&gt;innodb会在空闲时候保存到磁盘&lt;/p&gt;
+&lt;p&gt;如果redo log 写满了会阻塞，将记录更新，腾出空间&lt;/p&gt;
+&lt;p&gt;InnoDB 的 redo log 是固定大小的，比如可以配置为一组 4 个文件，每个文件的大小是 1GB，那么这块“粉板”总共就可以记录 4GB 的操作。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span class=&#34;k&#34;&gt;show&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;variables&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;like&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;%innodb_log_file%&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://example.com/p/mysql%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/img/image-20220620171014421.png&#34;
+	width=&#34;1342&#34;
+	height=&#34;1002&#34;
+	srcset=&#34;https://example.com/p/mysql%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/img/image-20220620171014421_huae47130c10ba075bd3f0a95987240786_292934_480x0_resize_box_2.png 480w, https://example.com/p/mysql%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/img/image-20220620171014421_huae47130c10ba075bd3f0a95987240786_292934_1024x0_resize_box_2.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20220620171014421&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;133&#34;
+		data-flex-basis=&#34;321px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;有了 redo log，InnoDB 就可以保证即使数据库发生异常重启，之前提交的记录都不会丢失，这个能力称为&lt;code&gt;crash-safe&lt;/code&gt;。&lt;/p&gt;
+&lt;h2 id=&#34;binlog&#34;&gt;binlog&lt;/h2&gt;
+&lt;p&gt;MyISAM 是MySQL 自带的。innodb是另一个公司以插件形式引入MySQL的。&lt;/p&gt;
+&lt;p&gt;MyISAM 没有crash-safe能力。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://example.com/p/mysql%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/img/image-20220620172856153.png&#34;
+	width=&#34;1192&#34;
+	height=&#34;1720&#34;
+	srcset=&#34;https://example.com/p/mysql%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/img/image-20220620172856153_hu84a628079a378c04358f7e84649dbbcf_720749_480x0_resize_box_2.png 480w, https://example.com/p/mysql%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/img/image-20220620172856153_hu84a628079a378c04358f7e84649dbbcf_720749_1024x0_resize_box_2.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20220620172856153&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;69&#34;
+		data-flex-basis=&#34;166px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;数据库恢复：&lt;/p&gt;
+&lt;p&gt;找到最近的一次全量备份，从备份时间开始 将备份的binlog依次取出来&lt;/p&gt;
+&lt;p&gt;两阶段提交：&lt;/p&gt;
+&lt;p&gt;必须先写redolog,因为如果蹦了，binlog如果先写&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

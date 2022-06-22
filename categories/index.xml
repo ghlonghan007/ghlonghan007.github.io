@@ -6,13 +6,29 @@
         <description>Recent content in Categories on MMay`s Site</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Wed, 08 Jun 2022 13:32:01 +0800</lastBuildDate><atom:link href="https://example.com/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 17 Jun 2022 13:32:01 +0800</lastBuildDate><atom:link href="https://example.com/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Mysql</title>
+        <link>https://example.com/categories/mysql/</link>
+        <pubDate>Fri, 17 Jun 2022 13:32:01 +0800</pubDate>
+        
+        <guid>https://example.com/categories/mysql/</guid>
+        <description>&lt;img src="https://example.com/categories/mysql/1516163958219817909.jpeg" alt="Featured image of post Mysql" /&gt;</description>
+        </item>
+        <item>
+        <title>git</title>
+        <link>https://example.com/categories/git/</link>
+        <pubDate>Thu, 09 Jun 2022 00:52:08 +0800</pubDate>
+        
+        <guid>https://example.com/categories/git/</guid>
+        <description>&lt;img src="https://example.com/categories/git/index.jpeg" alt="Featured image of post git" /&gt;</description>
+        </item>
+        <item>
         <title>GO</title>
         <link>https://example.com/categories/go/</link>
         <pubDate>Wed, 08 Jun 2022 13:32:01 +0800</pubDate>
         
         <guid>https://example.com/categories/go/</guid>
-        <description></description>
+        <description>&lt;img src="https://example.com/categories/go/5e996d4855dad999.jpeg" alt="Featured image of post GO" /&gt;</description>
         </item>
         <item>
         <title>Test</title>
@@ -20,7 +36,7 @@
         <pubDate>Wed, 08 Jun 2022 12:07:17 +0800</pubDate>
         
         <guid>https://example.com/categories/test/</guid>
-        <description>&lt;img src="https://example.com/categories/test/hutomo-abrianto-l2jk-uxb1BY-unsplash.jpg" alt="Featured image of post Test" /&gt;</description>
+        <description>&lt;img src="https://example.com/categories/test/pawel-czerwinski-8uZPynIu-rQ-unsplash_hud7e36f7e20e71be184458283bdae4646_55974_1600x0_resize_q75_box.jpg" alt="Featured image of post Test" /&gt;</description>
         </item>
         <item>
         <title>测试</title>
@@ -28,7 +44,7 @@
         <pubDate>Wed, 08 Jun 2022 12:07:17 +0800</pubDate>
         
         <guid>https://example.com/categories/%E6%B5%8B%E8%AF%95/</guid>
-        <description></description>
+        <description>&lt;img src="https://example.com/categories/%E6%B5%8B%E8%AF%95/pawel-czerwinski-8uZPynIu-rQ-unsplash_hud7e36f7e20e71be184458283bdae4646_55974_1600x0_resize_q75_box.jpg" alt="Featured image of post 测试" /&gt;</description>
         </item>
         <item>
         <title>syntax</title>
