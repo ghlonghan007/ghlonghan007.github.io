@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>机器学习 on MMay`s Site</title>
+        <link>https://example.com/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</link>
+        <description>Recent content in 机器学习 on MMay`s Site</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Mon, 20 Nov 2023 15:13:44 +0800</lastBuildDate><atom:link href="https://example.com/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Npu</title>
+        <link>https://example.com/p/npu/</link>
+        <pubDate>Mon, 20 Nov 2023 15:13:44 +0800</pubDate>
+        
+        <guid>https://example.com/p/npu/</guid>
+        <description>&lt;img src="https://example.com/p/npu/720.png" alt="Featured image of post Npu" /&gt;&lt;p&gt;npu-smi&lt;/p&gt;
+&lt;h2 id=&#34;开启远程jupyter&#34;&gt;开启远程jupyter&lt;/h2&gt;
+&lt;p&gt;jupyter notebook &amp;ndash;generate-config
+vim ~/.jupyter/jupyter_notebook_config.py&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;NotebookApp&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;allow_remote_access&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;True&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#允许远程连接&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;NotebookApp&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ip&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;*&amp;#39;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# 设置所有ip皆可访问&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;NotebookApp&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;password&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;sa&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;sha:..&amp;#39;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#之前复制的密码,或者输入的字符&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;NotebookApp&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;notebook_dir&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;/usr/local/spark/mycode/Covid-19-Analysis&amp;#39;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# 启动的默认目录&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;NotebookApp&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;open_browser&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;False&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# 禁止自动打开浏览器&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;NotebookApp&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;port&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;8888&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#任意指定一个端口&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;jupyter notebook &amp;ndash;allow-root&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>机器学习笔记</title>
+        <link>https://example.com/p/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+        <pubDate>Sat, 14 Oct 2023 21:28:16 +0800</pubDate>
+        
+        <guid>https://example.com/p/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
+        <description>&lt;img src="https://example.com/p/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/WX20231014-212739@2x.png" alt="Featured image of post 机器学习笔记" /&gt;&lt;h1 id=&#34;基本术语z&#34;&gt;基本术语Z&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;数据集&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;​	&lt;strong&gt;属性空间&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;编号&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;品种&lt;/th&gt;
+&lt;th&gt;重量（千克）&lt;/th&gt;
+&lt;th&gt;产地&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;001&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;甜瓜&lt;/td&gt;
+&lt;td&gt;4.5&lt;/td&gt;
+&lt;td&gt;中国&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;002&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;黄瓜&lt;/td&gt;
+&lt;td&gt;1.2&lt;/td&gt;
+&lt;td&gt;美国&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;003&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;无籽西瓜&lt;/td&gt;
+&lt;td&gt;6.0&lt;/td&gt;
+&lt;td&gt;墨西哥&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;004&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;青瓜&lt;/td&gt;
+&lt;td&gt;0.8&lt;/td&gt;
+&lt;td&gt;西班牙&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;005&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;剁椒拌西瓜&lt;/td&gt;
+&lt;td&gt;2.5&lt;/td&gt;
+&lt;td&gt;泰国&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;​    &lt;strong&gt;属性/特征&lt;/strong&gt;  label&lt;/p&gt;
+&lt;p&gt;​		结构化数据的行&lt;/p&gt;
+&lt;p&gt;​		有多少个属性 = 维度&lt;/p&gt;
+&lt;p&gt;​	&lt;strong&gt;样本&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;​		 结构化数据的列&lt;/p&gt;
+&lt;p&gt;​	&lt;strong&gt;特征向量&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;​&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;分类问题&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;​	有监督学习&lt;/p&gt;
+&lt;p&gt;​	二分类/多分类（西瓜好瓜 坏瓜）&lt;/p&gt;
+&lt;p&gt;​		正类&lt;/p&gt;
+&lt;p&gt;​		反类&lt;/p&gt;
+&lt;p&gt;​&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;回归问题&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;​	评估一个值 （西瓜成熟度 0.1 0.2）&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;聚类问题&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;​	无监督学习&lt;/p&gt;
+&lt;p&gt;​	泛化能力&lt;/p&gt;
+&lt;p&gt;​		过拟合&lt;/p&gt;
+&lt;p&gt;​		NFL没有免费的午餐（No Free Lunch）：没有一种通用的算法能够适用于所有不同类型的问题，数据分布		和任务。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>机器学习笔记</title>
+        <link>https://example.com/p/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+        <pubDate>Sat, 14 Oct 2023 21:28:16 +0800</pubDate>
+        
+        <guid>https://example.com/p/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
+        <description>&lt;img src="https://example.com/p/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/WX20231014-212739@2x.png" alt="Featured image of post 机器学习笔记" /&gt;&lt;p&gt;python ./llama.cpp/convert-llama-ggmlv3-to-gguf.py &amp;ndash;eps 1e-5 &amp;ndash;input soulteary/Chinese-Llama-2-7b-ggml-q4.bin &amp;ndash;output soulteary/Chinese-Llama-2-7b-gguf-q4.bin&lt;/p&gt;
+&lt;p&gt;Dockerfile&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;29
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;30
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;31
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;32
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;33
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;34
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;35
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;36
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;37
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;38
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;39
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;40
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;41
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;42
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;43
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;44
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;45
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;46
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;47
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;48
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;49
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;50
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;51
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;52
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;53
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;54
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;55
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;56
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;57
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;58
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;59
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;60
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;61
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;62
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;63
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;# packages install stage
+
+FROM python:3.10-slim 
+
+
+RUN apt-get update \
+    &amp;amp;&amp;amp; apt-get install -y --no-install-recommends gcc g++ python3-dev libc-dev libffi-dev
+
+COPY requirements.txt /requirements.txt
+RUN pip install --upgrade pip \
+    &amp;amp;&amp;amp;  pip install  -r requirements.txt
+
+# build stage
+
+# FROM python:3.10-slim AS builder
+
+# ENV FLASK_APP app.py
+
+# ENV EDITION SELF_HOSTED
+
+# ENV DEPLOY_ENV PRODUCTION
+
+# ENV CONSOLE_API_URL http://127.0.0.1:5001
+
+# ENV CONSOLE_WEB_URL http://127.0.0.1:3000
+
+# ENV SERVICE_API_URL http://127.0.0.1:5001
+
+# ENV APP_API_URL http://127.0.0.1:5001
+
+# ENV APP_WEB_URL http://127.0.0.1:3000
+
+EXPOSE 9997
+
+# WORKDIR /app/api
+
+# RUN apt-get update \
+
+#     &amp;amp;&amp;amp; apt-get install -y --no-install-recommends bash curl wget vim nodejs \
+
+#     &amp;amp;&amp;amp; apt-get autoremove \
+
+#     &amp;amp;&amp;amp; rm -rf /var/lib/apt/lists/*
+
+# COPY --from=base /pkg /usr/local
+
+# COPY . /app/api/
+
+# RUN python -c &amp;#34;from transformers import GPT2TokenizerFast; GPT2TokenizerFast.from_pretrained(&amp;#39;gpt2&amp;#39;)&amp;#34;
+
+# ENV TRANSFORMERS_OFFLINE true
+
+# COPY docker/entrypoint.sh /entrypoint.sh
+
+# RUN chmod +x /entrypoint.sh
+
+# ARG COMMIT_SHA
+
+# ENV COMMIT_SHA ${COMMIT_SHA}
+
+RUN [&amp;#34;/bin/bash&amp;#34;, &amp;#34;which xinference&amp;#34;]
+ENTRYPOINT [&amp;#34;/bin/bash&amp;#34;, &amp;#34;python  /usr/local/bin/xinference&amp;#34;]
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;extra_hosts:&lt;/p&gt;
+&lt;p&gt;​	&amp;ldquo;host.docker.internal:host-gateway&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;psql -U postgres
+\c dify;
+SELECT id,email FROM  accounts;&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
