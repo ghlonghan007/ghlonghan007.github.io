@@ -348,145 +348,71 @@
     <section class="article-content">
     
     
-    <p>python ./llama.cpp/convert-llama-ggmlv3-to-gguf.py &ndash;eps 1e-5 &ndash;input soulteary/Chinese-Llama-2-7b-ggml-q4.bin &ndash;output soulteary/Chinese-Llama-2-7b-gguf-q4.bin</p>
-<p>Dockerfile</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
-</span><span class="lnt">30
-</span><span class="lnt">31
-</span><span class="lnt">32
-</span><span class="lnt">33
-</span><span class="lnt">34
-</span><span class="lnt">35
-</span><span class="lnt">36
-</span><span class="lnt">37
-</span><span class="lnt">38
-</span><span class="lnt">39
-</span><span class="lnt">40
-</span><span class="lnt">41
-</span><span class="lnt">42
-</span><span class="lnt">43
-</span><span class="lnt">44
-</span><span class="lnt">45
-</span><span class="lnt">46
-</span><span class="lnt">47
-</span><span class="lnt">48
-</span><span class="lnt">49
-</span><span class="lnt">50
-</span><span class="lnt">51
-</span><span class="lnt">52
-</span><span class="lnt">53
-</span><span class="lnt">54
-</span><span class="lnt">55
-</span><span class="lnt">56
-</span><span class="lnt">57
-</span><span class="lnt">58
-</span><span class="lnt">59
-</span><span class="lnt">60
-</span><span class="lnt">61
-</span><span class="lnt">62
-</span><span class="lnt">63
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback"># packages install stage
-
-FROM python:3.10-slim 
-
-
-RUN apt-get update \
-    &amp;&amp; apt-get install -y --no-install-recommends gcc g++ python3-dev libc-dev libffi-dev
-
-COPY requirements.txt /requirements.txt
-RUN pip install --upgrade pip \
-    &amp;&amp;  pip install  -r requirements.txt
-
-# build stage
-
-# FROM python:3.10-slim AS builder
-
-# ENV FLASK_APP app.py
-
-# ENV EDITION SELF_HOSTED
-
-# ENV DEPLOY_ENV PRODUCTION
-
-# ENV CONSOLE_API_URL http://127.0.0.1:5001
-
-# ENV CONSOLE_WEB_URL http://127.0.0.1:3000
-
-# ENV SERVICE_API_URL http://127.0.0.1:5001
-
-# ENV APP_API_URL http://127.0.0.1:5001
-
-# ENV APP_WEB_URL http://127.0.0.1:3000
-
-EXPOSE 9997
-
-# WORKDIR /app/api
-
-# RUN apt-get update \
-
-#     &amp;&amp; apt-get install -y --no-install-recommends bash curl wget vim nodejs \
-
-#     &amp;&amp; apt-get autoremove \
-
-#     &amp;&amp; rm -rf /var/lib/apt/lists/*
-
-# COPY --from=base /pkg /usr/local
-
-# COPY . /app/api/
-
-# RUN python -c &#34;from transformers import GPT2TokenizerFast; GPT2TokenizerFast.from_pretrained(&#39;gpt2&#39;)&#34;
-
-# ENV TRANSFORMERS_OFFLINE true
-
-# COPY docker/entrypoint.sh /entrypoint.sh
-
-# RUN chmod +x /entrypoint.sh
-
-# ARG COMMIT_SHA
-
-# ENV COMMIT_SHA ${COMMIT_SHA}
-
-RUN [&#34;/bin/bash&#34;, &#34;which xinference&#34;]
-ENTRYPOINT [&#34;/bin/bash&#34;, &#34;python  /usr/local/bin/xinference&#34;]
-
-</code></pre></td></tr></table>
-</div>
-</div><p>extra_hosts:</p>
-<p>​	&ldquo;host.docker.internal:host-gateway&rdquo;</p>
-<p>psql -U postgres
-\c dify;
-SELECT id,email FROM  accounts;</p>
+    <h1 id="基本术语z">基本术语Z</h1>
+<p><strong>数据集</strong></p>
+<p>​	<strong>属性空间</strong></p>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>编号</th>
+<th style="text-align:center">品种</th>
+<th>重量（千克）</th>
+<th>产地</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>001</td>
+<td style="text-align:center">甜瓜</td>
+<td>4.5</td>
+<td>中国</td>
+</tr>
+<tr>
+<td>002</td>
+<td style="text-align:center">黄瓜</td>
+<td>1.2</td>
+<td>美国</td>
+</tr>
+<tr>
+<td>003</td>
+<td style="text-align:center">无籽西瓜</td>
+<td>6.0</td>
+<td>墨西哥</td>
+</tr>
+<tr>
+<td>004</td>
+<td style="text-align:center">青瓜</td>
+<td>0.8</td>
+<td>西班牙</td>
+</tr>
+<tr>
+<td>005</td>
+<td style="text-align:center">剁椒拌西瓜</td>
+<td>2.5</td>
+<td>泰国</td>
+</tr>
+</tbody>
+</table></div>
+<p>​    <strong>属性/特征</strong>  label</p>
+<p>​		结构化数据的行</p>
+<p>​		有多少个属性 = 维度</p>
+<p>​	<strong>样本</strong></p>
+<p>​		 结构化数据的列</p>
+<p>​	<strong>特征向量</strong></p>
+<p>​</p>
+<p><strong>分类问题</strong></p>
+<p>​	有监督学习</p>
+<p>​	二分类/多分类（西瓜好瓜 坏瓜）</p>
+<p>​		正类</p>
+<p>​		反类</p>
+<p>​</p>
+<p><strong>回归问题</strong></p>
+<p>​	评估一个值 （西瓜成熟度 0.1 0.2）</p>
+<p><strong>聚类问题</strong></p>
+<p>​	无监督学习</p>
+<p>​	泛化能力</p>
+<p>​		过拟合</p>
+<p>​		NFL没有免费的午餐（No Free Lunch）：没有一种通用的算法能够适用于所有不同类型的问题，数据分布		和任务。</p>
 
 </section>
 
