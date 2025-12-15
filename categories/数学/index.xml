@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>数学 on MMay`s Site</title>
+        <link>https://example.com/categories/%E6%95%B0%E5%AD%A6/</link>
+        <description>Recent content in 数学 on MMay`s Site</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Mon, 27 Nov 2023 10:26:00 +0800</lastBuildDate><atom:link href="https://example.com/categories/%E6%95%B0%E5%AD%A6/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>线代</title>
+        <link>https://example.com/p/%E7%BA%BF%E4%BB%A3/</link>
+        <pubDate>Mon, 27 Nov 2023 10:26:00 +0800</pubDate>
+        
+        <guid>https://example.com/p/%E7%BA%BF%E4%BB%A3/</guid>
+        <description>&lt;img src="https://example.com/p/%E7%BA%BF%E4%BB%A3/1.png" alt="Featured image of post 线代" /&gt;&lt;p&gt;&lt;strong&gt;方程组&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;完整complete，冗余，矛盾&lt;/p&gt;
+&lt;p&gt;每一个方程就是一个句子&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;线性方程组&lt;/strong&gt;&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

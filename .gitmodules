@@ -1,0 +1,6 @@
+[submodule "blog/themes/themes/hugo-theme-stack"]
+	path = blog/themes/themes/hugo-theme-stack
+	url = https://github.com/CaiJimmy/hugo-theme-stack/
+[submodule "blog/themes/hugo-theme-stack"]
+	path = blog/themes/hugo-theme-stack
+	url = https://github.com/CaiJimmy/hugo-theme-stack/
